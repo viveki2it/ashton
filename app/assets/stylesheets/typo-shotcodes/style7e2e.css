@@ -1,0 +1,13 @@
+/*TOGGLE*/
+
+h4.toggle { font:300 14px 'Roboto', sans-serif; color:#41494F; margin-bottom:1px; background:#F2F2F2; margin-bottom:2px; }
+h4.toggle a { color: #41494F; text-decoration: none; display: block; padding:15px 25px; }
+h4.toggle a:before { content: "\f055"; font-family: FontAwesome; font-style:normal; font-weight:normal; text-decoration:inherit; color:#88c354; font-size:14px; padding-right:1em; }
+
+h4.active a { color:#FFF; background:#88c354; }
+h4.active a:before { content: "\f056"; font-family: FontAwesome; font-style:normal; font-weight:normal; text-decoration:inherit; color:#FFF; }
+
+.toggle_container { 
+	overflow:hidden; background:#FFF; border-bottom:1px solid #F0F0F0;
+	padding:22px 22px 7px 22px; padding-bottom:20px;
+}

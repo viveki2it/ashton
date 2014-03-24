@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ashtons | <%= params[:action].split("_").join(" ").capitalize %></title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <style type="text/css"></style>			<style type="text/css">	body, h1, h2, h3, h4, h5, h6, input, textarea, select { font-family:'Roboto', sans-serif; } </style></head>
+
+  <script type='text/javascript' src='assets/jquery-1.7.2.min.js'></script>
+  <script type='text/javascript' src='assets/jquery-migrate.min1576.js'></script>
+  <script type='text/javascript' src='assets/rs-plugin/jquery.themepunch.plugins.min6ee0.js'></script>
+  <script type='text/javascript' src='assets/rs-plugin/jquery.themepunch.revolution.min6ee0.js'></script>
+  <script type='text/javascript' src='assets/gmaps.js'></script>
+  <script type='text/javascript' src='assets/gmap7e2e.js'></script>
+  <script type='text/javascript' src='assets/comment-reply.min7e2e.js'></script>
+  <script type='text/javascript' src='assets/jquery.notifyBar.js'></script>
+<%['notice', 'error', 'warning', 'alert'].each do |f|%>
+      <%if flash[f.to_sym]%>
+        <script type="text/javascript" >
+          jQuery(function () {
+            jQuery.notifyBar({
+              cls: "<%= f %>",
+              html: "<%=  flash[f.to_sym] %>",
+              delay: 3000,
+              animationSpeed: "normal"
+            });
+          });
+        </script>
+      <%end%>
+    <%end%>
+  <script type="text/javascript">
+    (function($) {
+      "use strict";
+      var map;
+      $(document).ready(function() {
+        map = new GMaps({
+          div: "#map",
+          lat: 51.494047,
+          lng: -3.176659,
+          zoom: 12});
+        map.addMarker({
+          lat: 51.494047,
+          lng: -3.176659,
+          title: "Ashtons Student & Professional Lettings",
+          infoWindow: {
+            content: "<p>Ashtons Student & Professional Lettings</p>"
+          }
+        });
+      });
+    })(jQuery);
+  </script>
+</head>
+<body class="home page page-id-6 page-template page-template-template-homepage-php">
+  <div class="top-toggle">
+    <div class="sliding-bar">
+      <div class="inside clear">
+        <div class="header-widgets">
+          <div id="text-7" class="widget widget_text">
+            <h5>Text Widget</h5>
+            <div class="textwidget">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+            </div>
+          </div>
+          <div id="dribbblefeed-2" class="widget homeland_widget-dribbble">
+            <h5>Dribbble</h5>
+            <!--DRIBBBLE FEED-->
+            <ul id="dribbble" class="clear"></ul>
+
+            <script type="text/javascript">
+              (function($) {
+                "use strict";
+                $(document).ready(function() {
+                  $.jribbble.getShotsByPlayerId('craighenry', function(playerShots) {
+                    var html = [];
+
+                    $.each(playerShots.shots, function(i, shot) {
+                      html.push('<li><a href="' + shot.url + '" target="_blank">');
+                      html.push('<img src="' + shot.image_teaser_url + '" ');
+                      html.push('alt="' + shot.title + '"></a></li>');
+                    });
+
+                    $('#dribbble').html(html.join(''));
+                  }, {page: 1, per_page: 8});
+
+                });
+              })(jQuery);
+            </script>
+          </div>
+          <div id="archives-3" class="widget widget_archive">
+            <h5>Archives</h5>		
+            <ul>
+              <li><a href='javascript:void(0)'>February 2014</a>&nbsp;(1)</li>
+              <li><a href='javascript:void(0)'>December 2013</a>&nbsp;(3)</li>
+            </ul>
+          </div>
+          <div id="video-4" class="widget homeland_widget-video">	
+
+            <!--VIDEO-->
+            <h5>Featured Video</h5>
+            <div class="side-video"><iframe src="http://player.vimeo.com/video/34182381?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="slide-toggle">&nbsp;</a>
+  </div>
+  <!--CONTAINER-->
+  <div id='container'>
+
+    <header>		
+      <section class="header-block">
+        <div class="inside clear">
+          <!--SOCIAL-->
+          <div class="social clear">
+            <ul>
+              <li><a href="http://twitter.com/mabuc" target="_blank"><i class="fa fa-twitter"></i></a></li>	
+              <li><a href="http://facebook.com/mabuc" target="_blank"><i class="fa fa-facebook"></i></a></li>	
+              <li><a href="http://youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a></li>	
+              <li><a href="http://pinterest.com/mabuc" target="_blank"><i class="fa fa-pinterest"></i></a></li>	
+              <li><a href="http://linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a></li>	
+              <li><a href="http://dribbble.com/mabuc" target="_blank"><i class="fa fa-dribbble"></i></a></li>	
+              <li><a href="http://feedburner.com/" target="_blank"><i class="fa fa-rss"></i></a></li>	
+            </ul>
+          </div>
+          <!--CALL INFO.-->
+          <div class="call-info clear">
+            <span class="call-us"><i class="fa fa-phone"></i>
+              Call us: 02920 231106			</span>
+            <a href="http://ashtons.landmax.pro/sign-in" class="login" target="_blank">
+              <i class="fa fa-user"></i>
+              Login				
+            </a>
+            <div id="sb-search" class="sb-search search-icon">
+              <form action="//" method="get" id="searchform">
+                <input class="sb-search-input" placeholder="Enter Keyword and hit enter..." type="text" value="" id="s" name="s">
+                <input class="sb-search-submit" type="submit" value="">
+                <span class="sb-icon-search"></span>
+              </form>
+            </div>
+          </div>	
+
+        </div>
+      </section>
+      <div class="inside clear">
+        <!--LOGO-->		
+        <aside class="logo clear">
+          <h1>
+            <a href="/">
+              <img src="assets/uploads/2014/01/logo1.png" alt="Homeland" title="Homeland" />					</a>
+          </h1>
+        </aside>
+        <!--MENU-->
+        <nav class="clear">
+          <div id="dropdown" class="theme-menu">
+            <ul id="main-menu" class="sf-menu">
+              <li id="menu-item-119" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-119 <%= params[:controller] == "home" and params[:action] == "index" ? "current-menu-ancestor current-menu-parent" : "" %>"><a href="/">Home</a>
+              </li>
+              <li id="menu-item-25" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-25 <%= params[:controller] == "home" and params[:action] == "about_us" ? "current-menu-ancestor current-menu-parent" : "" %>"><%= link_to "About Us", about_us_path %>
+              </li>
+              <li id="menu-item-163" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-163"><a href="javascript:void(0);">Properties</a>
+                <ul class="sub-menu">
+                  <li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="javascript:void(0);" onclick="alert('Coming soon!!')">Lettings</a></li>
+                  <li id="menu-item-162" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162"><a href="javascript:void(0);" onclick="alert('Coming soon!!')">Sales</a></li>
+                </ul>
+              </li>
+              <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19 <%=  params[:controller] == "home" and params[:action] == "contact_us" ? "current-menu-ancestor current-menu-parent" : ""   %>"><%= link_to "Contact Us", contact_us_path%></li>
+            </ul>
+          </div>			
+        </nav>	
+
+      </div>		
+    </header>
+
+    <!--TITLE-->
+    <style type="text/css">
+      .page-title-block-default { background:url('assets/uploads/2013/12/View-over-the-lake_www.LuxuryWallpapers.net_-1920x300.jpg'); }
+      .page-title-block { background:url('assets/uploads/2013/12/modern_interior_design-wallpaper-1920x1440.jpg'); }			
+      .page-title-block-archive { background:url(''); }			
+      .page-title-block-search { background:url(''); }			
+      .page-title-block-error { background:url(''); }			
+      .page-title-block-agent { background:url(''); }			
+    </style>
+    <%= yield %>
+
+    <footer>	
+      <!--FOOTER WIDGETS-->
+      <section class="footer-widgets">
+        <div class="inside clear">
+          <div class="widget-column">
+            <div id="text-2" class="widget widget_text">
+              <div class="textwidget">
+                <p><img src="assets/uploads/footer-logo.html"></p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+            </div>						
+          </div>
+          <div class="widget-column">
+            <div id="contact-2" class="widget homeland_widget-contact-info">
+              <h5>Address</h5>
+              <!--CONTACT INFO-->
+              <ul>
+                <li class="clear"><i class="fa fa-map-marker fa-lg"></i><label>140 Woodville Road, Roath, Cardiff, CF24 4EE</label></li>
+                <li><i class="fa fa-mobile fa-lg"></i>Call us: 02920 231106</li>
+                <li><i class="fa fa-envelope-o fa-lg"></i><a href="mailto:info@site.com">info@site.com</a></li>
+              </ul>
+
+            </div>						
+          </div>
+          <div class="widget-column">
+            <div id="meta-3" class="widget widget_meta"><h5>Links</h5>			
+              <ul>
+                <li><a href="http://ashtons.landmax.pro/sign-in" target="_blank">Log in</a></li>
+                <li><a href="javascript:void(0);" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+                <li><a href="javascript:void(0);" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+                <li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>						
+              </ul>
+            </div>						
+          </div>
+          <div class="widget-column last">
+            <div id="newslettersignupwidget-2" class="widget nsu_widget">
+              <h5>Newsletter</h5>
+              <div class="nsu-text-before-form">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+              <!-- Form by Newsletter Sign-Up v2.0.3 - http://wordpress.org/plugins/newsletter-sign-up/ -->
+              <form class="nsu-form" id="nsu-form-0" action="#" method="post">
+                <p>
+                  <label for="nsu-email-0">Email</label>
+                  <input class="nsu-field" id="nsu-email-0" type="email" name="" placeholder="Enter your Email Address" required />
+                </p>
+                <textarea name="nsu_robocop" style="display: none;"> </textarea>
+                <p>
+                  <input type="submit" id="nsu-submit-0" class="nsu-submit" name="nsu_submit" value="Sign up" />
+                </p>
+              </form>
+              <!-- / Newsletter Sign-Up -->
+            </div>						
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="footer-main">
+        <div class="inside clear">
+          <div class="footer-inside">
+            <label class="copyright">
+              &copy;&nbsp;2014&nbsp;<a href="/">Ashtons</a>&nbsp;&dash;&nbsp;All Rights Reserved&nbsp;					</label>
+            <a href="#" id="toTop"><i class="fa fa-angle-up"></i></a>	
+          </div>
+        </div>
+      </section>			
+    </footer>
+
+  </div>
+  <script type='text/javascript' src='assets/typo-shortcodes/jquery.toggle7e2e.js'></script>
+  <script type='text/javascript' src='assets/typo-shortcodes/jquery.tabs7e2e.js'></script>
+  <script type='text/javascript' src='assets/typo-shortcodes/alert7e2e.js'></script>
+  <script type='text/javascript' src='assets/jribbble7e2e.js'></script>
+  <script type='text/javascript' src='assets/jquery.tweet7e2e.js'></script>
+  <script type='text/javascript' src='assets/jquery.superfish.min7e2e.js'></script>
+  <script type='text/javascript' src='assets/jquery.easing-1.3.min7e2e.js'></script>
+  <script type='text/javascript' src='assets/retina7e2e.js'></script>
+  <script type='text/javascript' src='assets/jquery.flexslider-min7e2e.js'></script>
+  <script type='text/javascript' src='assets/modernizr.custom7e2e.js'></script>
+  <script type='text/javascript' src='assets/elastislide/jquery.elastislide7e2e.js'></script>
+  <script type='text/javascript' src='assets/elastislide/custom-elastislide7e2e.js'></script>
+  <script type='text/javascript' src='assets/search/uisearch7e2e.js'></script>
+  <script type='text/javascript' src='assets/search/classie7e2e.js'></script>
+  <script type='text/javascript' src='assets/search/modernizr.custom7e2e.js'></script>
+  <script type='text/javascript' src='assets/jquery.selectBox.min7e2e.js'></script>
+  <script type='text/javascript' src='assets/jquery.fitvids7e2e.js'></script>
+  <script type='text/javascript' src='assets/jquery.mobilemenu7e2e.js'></script>
+  <script type='text/javascript' src='assets/custom7e2e.js'></script>
+  <script type='text/javascript'>
+              /* <![CDATA[ */
+              var _wpcf7 = {"loaderUrl": "http:\/\/wp.themecss.com\/Homeland\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif", "sending": "Sending ..."};
+              /* ]]> */
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+/* Elastislide Style */
+.es-carousel-wrapper { position:relative; }
+.es-carousel { overflow:hidden; }
+.es-carousel ul { display:none; }
+.es-carousel ul li { height:100%; float:left; display:block; }
+.es-carousel ul li:last-child { margin-right:0 !important; }
+.es-carousel ul li a { display:block; }
+.es-carousel ul li a img { display:block; border:none; max-height:100%; max-width:100%; }
+.es-nav { position:absolute; top:-29px; right:0; cursor:pointer; background:#FFF; padding-left:20px; }
+.es-nav span { display:block !important; position: absolute; cursor: pointer; padding:2px 10px; border:3px solid #E1E1E1; }
+.es-nav span.es-nav-next { top:-34px; right:0; background:#FFF; }
+.es-nav span.es-nav-next:before { content: "\f105"; font-family: FontAwesome; font-style: normal; font-weight:normal; text-decoration: inherit; color:#AAA; }
+.es-nav span.es-nav-next:hover, .es-nav span.es-nav-prev:hover { border:3px solid #AAA; }
+.es-nav span.es-nav-prev { top: -34px; right:32px; background:#FFF; }
+.es-nav span.es-nav-prev:before { content: "\f104"; font-family: FontAwesome; font-style: normal; font-weight:normal; text-decoration: inherit; color:#AAA; }

@@ -1,0 +1,271 @@
+/********************************
+IPAD LANDSCAPE (1024x768)
+********************************/
+
+@media only screen and (max-width: 1200px) {
+	#container-boxed { width:960px; }
+	.inside, .home-thumb-flexslider { width:906px; }
+	.advance-search-block.advance-search-block-page .inside { width:846px; }
+	.selectBox-dropdown { width:282px !important; }
+	.advance-search-block select.small, .advance-search-block a.small { width:178px !important; }
+	.portfolio-slide-desc { padding:20px; font-size:14px; line-height:26px; }
+	.portfolio-slide-desc h2 { font-size:25px; }
+	.portfolio-slide-desc p { margin-bottom:0; }
+	.search-title, a.view-profile, .property-four-cols .view-details a { display:none; }
+	.pactions label, .pactions a:link, .pactions a:visited { font-size:20px; }
+	.home-flexslider .slider-actions { top:20%; }
+	.theme-menu ul li a:link, .theme-menu ul li a:visited, 
+	.sf-menu li.sfHover ul a:link, .sf-menu li.sfHover ul a:visited { padding-left:25px !important; padding-right:25px !important; }
+	.agent-block, .featured-block, .blog-block, .grid li { width:268px; }
+	.bdesc { width:175px; }
+	.feat-thumb, .featured-pass-thumb { width:128px; }
+	.featured-list figcaption a i { top:45%; }
+	.widget-column, .sliding-bar .widget { width:204px; }
+	.homeland_widget-contact-info ul li label { width:86%; }
+	.home-thumb-flexslider .slides { width:748px; }
+	.page-template-template-homepage3-php .search-title, 
+	.page-template-template-homepage4-php .search-title, 
+	.advance-search-block.advance-search-block-page .search-title { display:block; }
+	.page-template-template-homepage3-php .property-list-box .grid li, 
+	.services-list, .property-image, .property-three-cols .property-cols, .blist-fullwidth { width:272px; }
+	.page-template-template-homepage3-php .property-list-box .grid figcaption a i, 
+	.page-template-template-homepage4-php .featured-list figcaption a i, 
+	.agent-image .grid figcaption a i, .property-image figcaption a i,
+	.property-cols figcaption a i { top:50%; }
+	.page-template-template-homepage4-php .services-block .services-list { text-align:center; }
+	.page-template-template-homepage4-php .services-icon { width:100%; text-align:center; padding-bottom:30px; }
+	.page-template-template-homepage4-php .featured-block { width:587px; }
+	.page-template-template-homepage4-php .featured-list { width:193px; }
+	.advance-search-block-page .selectBox-dropdown { width:272px !important; }
+	.left-container { width:610px; }
+	.agent-about-list { width:104%; }
+	.agent-about-list .agent-image { width:190px; margin-right:20px; }
+	.agent-social ul li { margin-right:18px; }
+	.services-page-desc { width:390px; }
+	.agent-property-desc { width:308px; }
+	.property-two-cols .property-cols { width:433px; }
+	.property-four-cols .property-cols { width:196px; }
+	.grid figcaption a { width:100%; }
+	.property-page-name { width:280px; }
+	.property-page-price, .property-page-status { padding-right:20px; padding-left:20px; }
+	.agent-desc, .single-property .agent-desc { width:350px; }
+	.video-js { width:100% !important; height:370px !important; }
+	.comment-details { width:460px; }
+	.comment-list .children .comment-details { width:388px; }
+	.comment-list .children .children .comment-details { width:308px; }
+	#commentform ul li { margin-bottom:20px; margin-right:20px; }
+	#commentform input[type="text"] { width:158px; }
+	#commentform textarea { width:577px; }
+	.contact-form input[type="text"], .contact-form input[type="email"] { width:250px; }
+	.contact-form textarea { width:874px; }
+	.single-property .agent-list { width:100%; }
+	.agent-form { width:100%; float:left; margin-bottom:30px; }
+	.agent-form ul li input[type="text"], .agent-form ul li input[type="email"], .agent-form ul li textarea { width:588px; }
+	.blist-grid { margin-right:20px; margin-bottom:20px; width:190px; }
+	.blog-grid .sticky { margin-bottom:20px !important; }
+	a.continue { padding:6px 12px; }
+	.testi-desc { width:480px; }
+	#dsidx-listings .dsidx-secondary-data div { width: 100%; }
+	.dsidx-prop-summary { margin-bottom: 30px !important; }
+	.dsidx-details .dsidx-contact-form table td.column-one { width: 20%; }
+	#dsidx.dsidx-details .dsidx-contact-form table input.dsidx-text { width: 365px; }
+	#dsidx.dsidx-details .dsidx-contact-form table textarea { width: 575px; }
+}
+
+
+/********************************
+IPAD PORTRAIT (768x1024)
+********************************/
+
+@media only screen and (max-width: 960px) {
+	#container-boxed { width:690px; }
+	.inside, .home-thumb-flexslider, .left-container { width:600px; }
+	.home-thumb-flexslider .slides { width:485px; }
+	.home-thumb-flexslider .flex-control-thumbs { width:110px; }
+	#main-menu, .pactions { display:none; }
+	.select-menu { display:block; border:1px solid #E1E1E1; width:290px; position:relative; top:45px; padding:4px; }
+	.social ul li a:link, .social ul li a:visited { width:35px; }
+	.portfolio-slide-desc { width:400px; line-height:22px; }
+	.portfolio-slide-desc h2 { font-size:22px; }
+	.selectBox-dropdown { width:186px !important; }
+	.advance-search-block ul li { margin-right:20px; margin-bottom:20px; }
+	.advance-search-block select.small, .advance-search-block a.small { width:111px !important; }
+	.grid li, .agent-block, .featured-block, .blog-block, .page-template-template-homepage4-php 
+	.services-block .services-desc { width:100%; }
+	.featured-block, .blog-block { border-left:0px; padding-top:0; padding-left:0; }
+	.feat-desc, .bdesc { width:auto; }
+	.widget-column, .sliding-bar .widget { width:135px; margin-right:20px; margin-bottom:20px; }
+	footer .widget h5, .agent-block h3, .featured-block h3, .blog-block h3 { font-size:18px; }
+	.homeland_widget-contact-info ul li label { width:77%; }
+	.nsu-form input[type="email"] { width:112px; }
+	.services-list { margin-right:20px; margin-bottom:20px; width:186px; }
+	.feat-desc h5 a:link, .feat-desc h5 a:visited, .feat-desc span.price { font-size:16px; }
+	.feat-desc span { font-size:12px; }
+	.feat-desc span.price { padding-top:20px; }
+	.page-template-template-homepage4-php .featured-block { padding-top:50px; }
+	.advance-search-block.advance-search-block-page .inside { width:540px; }
+	.advance-search-block-page .selectBox-dropdown { width:170px !important; }
+	.advance-search-block input[type="submit"] { position:relative; top:-20px; }
+	.advance-search-block select.small, .advance-search-block a.small { width:120px !important; }
+	.agent-about-list .agent-image { width:186px; }
+	.sidebar { width:93%; margin-bottom:40px; }
+	.pp-desc { width:83%; }
+	.services-page-desc { width:380px; }
+	.agent-property-desc { width:280px; }
+	.property-two-cols .property-cols { width:279px; }
+	.property-two-cols .property-cols figcaption a i { top:70%; }
+	.property-three-cols .property-cols, .blist-fullwidth { width:186px; }	
+	.property-three-cols .property-cols figcaption a i, .property-four-cols .property-cols figcaption a i { top:65%; }
+	.property-three-cols ul li, .property-four-cols ul li, .blist-fullwidth { margin-right:20px; }
+	.property-four-cols .property-cols { width:135px; }
+	.property-four-cols ul li { margin-bottom:20px; }
+	.property-four-cols .property-desc { padding:15px; }
+	.property-page-name { width:270px; }
+	.agent-desc, .single-property .agent-desc { width:340px; }
+	.comment-details { width:455px; }
+	.comment-list .children .comment-details { width:378px; }
+	.comment-list .children .children .comment-details { width:298px; }
+	#commentform input[type="text"] { width:154px; }
+	#commentform textarea { width:566px; }
+	.contact-form ul li { margin-right:20px; margin-bottom:20px; }
+	.contact-form input[type="text"], .contact-form input[type="email"] { width:154px; }
+	.contact-form textarea { width:566px; }
+	.agent-form ul li input[type="text"], .agent-form ul li input[type="email"], .agent-form ul li textarea { width:578px; }
+	.advance-search-widget ul li select { width:423px; }
+	.dsidx-search-widget input[type="text"] { width:434px; }
+	.dsidx-search-widget select { width: 446px; }
+	.blist-grid { width:186px; }
+	.blog-fullwidth .sticky { margin-bottom:20px !important; }
+	.testi-desc { width:470px; }
+	.dsidx-search-widget { max-width:100%; }
+}
+
+
+/********************************
+IPHONE 4-4S-5 LANDSCAPE (568x320)
+********************************/
+
+@media only screen and (max-width: 760px) {
+	#container-boxed { width:380px; }
+	.inside, .home-thumb-flexslider, .left-container,
+	.page-template-template-homepage3-php .property-list-box .grid li, .property-image, .property-three-cols .property-cols, 
+	.page-template-template-homepage4-php .featured-block { width:330px; }
+	.advance-search-block.advance-search-block-page .inside { width:270px; }
+	.home-thumb-flexslider .slides { width:265px; }
+	.portfolio-slide-desc, .property-page-price, .property-page-status { display:none; }
+	.logo { width:100%; text-align:center; padding-top:30px; }
+	.select-menu { width:330px; top:-25px; }
+	.advance-search-block ul li { margin-right:0; }
+	.selectBox-dropdown, .advance-search-block select.small, .advance-search-block a.small { width:330px !important; }
+	.selectBox-dropdown .selectBox-label { width:90% !important; }
+	.advance-search-block-page .selectBox-dropdown, .advance-search-block-page select.small, .advance-search-block-page a.small { width:270px !important; }
+	.services-list, .widget-column, .services-page-desc, .agent-property-desc, 
+	.property-two-cols .property-cols, .sliding-bar .widget { width:100%; }
+	.welcome-block h2 { font-size:40px; margin-bottom:20px; }
+	.welcome-block label { font-size:20px; line-height:32px; }
+	.feat-desc, .bdesc { width:64%; }
+	.widget-column { margin-right:0; }
+	.homeland_widget-contact-info ul li label { width:93%; }
+	.nsu-form input[type="email"] { width:235px; }
+	.call-info { float:left; border-top:1px solid #E1E1E1; }
+	.call-info .call-us, .call-info a.login { padding-left:22px; padding-right:22px; }
+	.home-flexslider .flex-direction-nav { top:40%; }
+	.page-template-template-homepage2-php .services-block { background-repeat:repeat; }
+	.home-thumb-flexslider .flex-control-thumbs { width:60px; }
+	.property-home { margin-right:20px !important; width:250px !important; }	
+	.page-template-template-homepage3-php .property-home { width:330px !important; }	
+	a.view-property:link, a.view-property:visited { padding:10px 20px; }
+	.grid figcaption a i { top:55%; }
+	.feat-desc, .bdesc { width:56%; }
+	.homeland_widget-contact-info ul li label { width:91%; }
+	.testimonial-block h3 { font-size:30px; margin-bottom:20px; }
+	.ptitle { padding:20px; }
+	.subtitle { line-height:29px; }
+	.subtitle label { padding-left:20px; padding-right:20px; font-size:11px; }
+	.agent-about-list .agent-image { width:230px; }
+	.pp-desc { width:69%; }
+	.services-page-desc { text-align:center; }
+	.services-page-icon { margin-right:0; margin-left:20%; }
+	.property-image, .property-two-cols .property-cols { margin-right:0; margin-bottom:20px; }
+	.property-four-cols .property-cols { width:240px; margin-right:0; }
+	.property-four-cols .property-cols figcaption a i { top:45%; }
+	.property-page-name { padding:10px; width:auto; }
+	.property-page-status span, .property-page-price span { font-size:14px; }
+	.property-page-name h3 { font-size:18px; }
+	.share span, .agent-image { margin-bottom:20px; }
+	.agent-social ul li { margin-right:30px; }
+	.comment-details { width:265px; }
+	.comment-list .children .comment-details { width:230px; }
+	.comment-list .children .children .comment-details { width:188px; }
+	.comment-list .children .parent { margin-left:40px; }
+	.comment-list .children .children .parent { margin-left:80px; }
+	#commentform input[type="text"], #commentform textarea, .contact-form input[type="text"], 
+	.contact-form input[type="email"], .contact-form textarea { width:298px; }
+	.social ul li a:link, .social ul li a:visited { width:45px; }
+	.sidebar { width:88%; }
+	.agent-form ul li input[type="text"], .agent-form ul li input[type="email"], .agent-form ul li textarea { width:308px; }
+	.advance-search-widget ul li select { width:155px; }
+	.dsidx-search-widget input[type="text"] { width:166px; }
+	.dsidx-search-widget select { width: 178px; }
+	.sitemap { width:100%; margin-right:0; }
+	.blist-grid, .blist-fullwidth { margin-right:0; width:330px; }
+	.blist-grid img, .blist-fullwidth img { width:100%; }	
+	.testi-page-list img { margin-right:0; margin-bottom:30px; }
+	.testi-desc { width:100%; }
+	.call-info .call-us, .call-info a.login { padding-left: 18px; }
+	#dsidx-listings .dsidx-media .dsidx-photo { position: relative; width: 250px; }
+	#dsidx-listings .dsidx-primary-data, #dsidx-listings .dsidx-secondary-data { padding-left: 0; width: 100%; }
+	#dsidx.dsidx-details .dsidx-contact-form table input.dsidx-text { width: 200px; }
+	#dsidx.dsidx-details .dsidx-contact-form table textarea { width: 300px; }
+}
+
+
+/********************************
+IPHONE 4-4S-5 PORTRAIT (320x568)
+********************************/
+
+@media only screen and (max-width: 450px) {
+	#container-boxed { width:300px; }
+	.inside, .select-menu, .home-thumb-flexslider, .left-container, .page-template-template-homepage4-php .featured-block, 
+	.agent-desc, .single-property .agent-desc, .blist-grid, .blist-fullwidth { width:250px; }
+	.sidebar { width:84%; }
+	.social ul li a:link, .social ul li a:visited { width:34px; }
+	.call-info .call-us { width:204px; text-align:center; }
+	.sb-search, .call-info a.login { display:none; }
+	.home-flexslider .flex-direction-nav { top:28%; }
+	.selectBox-dropdown, .advance-search-block select.small, .advance-search-block a.small { width:250px !important; }
+	.selectBox-dropdown .selectBox-label { width:75% !important; }
+	.welcome-block h2 { font-size:26px; }
+	.welcome-block label { font-size:18px; }
+	.feat-desc, .bdesc { width:42%; }
+	.homeland_widget-contact-info ul li label { width:88%; }
+	.copyright { width:200px; display:block; }
+	.home-thumb-flexslider .slides { width:206px; }
+	.home-thumb-flexslider .flex-control-thumbs { width:40px; }
+	.page-template-template-homepage3-php .property-home, .property-image, .property-cols { width:250px !important; }
+	.testimonial-block h3 { font-size:22px; }
+	.testimonial-block label { font-size:14px; line-height:22px; }
+	.advance-search-block.advance-search-block-page .inside { width:190px; }
+	.advance-search-block-page .selectBox-dropdown, .advance-search-block-page select.small, .advance-search-block-page a.small { width:190px !important; }
+	.advance-search-block.advance-search-block-page .search-title h4 { font-size:18px; }
+	.pp-desc { width:57%; }
+	.services-page-icon { margin-left:12%; }
+	.advance-search-block label { font-size:14px; }
+	.cat-toogles ul li { margin-bottom:1px; }
+	.cat-toogles ul li a:link, .cat-toogles ul li a:visited { font-size:12px; }
+	.property-four-cols .property-cols { width:240px !important; }
+	.comment-details { width:190px; }
+	.comment-list .children .comment-details { width:170px; }
+	.comment-list .children .children .comment-details { width:148px; }
+	.comment-list .children .parent { margin-left:20px; }
+	.comment-list .children .children .parent { margin-left:40px; }
+	#commentform input[type="text"], #commentform textarea, .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea { width:218px; }
+	.contact-info label { display:block; }
+	.blog-text h4 { width:140px; }
+	.ptitle { font-size:25px; line-height:30px; }
+	.sidebar #dribbble li img, .sidebar .homeland_widget-flickr ul li img { width:46px; height:46px; }
+	.agent-form ul li input[type="text"], .agent-form ul li input[type="email"], .agent-form ul li textarea { width:228px; }
+	.advance-search-widget ul li select { width:168px; margin-left:0; }
+	.dsidx-search-widget select { width: 98px; }
+	.dsidx-search-widget input[type="text"] { width: 86px; }
+}

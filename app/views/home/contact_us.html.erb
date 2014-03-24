@@ -1,0 +1,52 @@
+<section class="page-title-block-default header-bg">
+  <div class="inside">
+    <h2 class="ptitle">Contact</h2>
+    <h4 class="subtitle">
+      <label>Lorem ipsum dolor sit amet, consectetur adipisicing elit</label>
+    </h4>
+  </div>
+</section>
+<!--CONTACT US-->
+<section id="map"></section>
+
+<section class="theme-pages">
+  <div class="inside">
+    <!--CONTACT INFO-->
+    <div class="contact-info">
+      <h2>Contact Information</h2>
+      <label><i class="fa fa-phone"></i><span>Phone:</span> 02920 231106</label>
+      <label><i class="fa fa-print"></i><span>Fax:</span> 123-456-7890</label>
+      <label><i class="fa fa-map-marker"></i><span>Address:</span>140 Woodville Road, Roath, Cardiff, CF24 4EE</label>
+    </div>
+    <!--CONTACT FORM-->
+    <div class="contact-form">
+      <div class="wpcf7" id="wpcf7-f4-p14-o1">
+        <%= form_tag({:action => "contact_us"}, {:class=>"wpcf7-form", "novalidate"=>"novalidate"}) do  %>
+          <ul>
+            <li>
+              <span class="wpcf7-form-control-wrap fname">
+                <%= text_field_tag :fname, params[:fname], :size => "40", :class => "wpcf7-form-control wpcf7-text wpf7-validates-as-required required", "aria-required" => true, "ara-invalid" => false, :placeholder => "Your Name" %>
+              </span>
+            </li>
+            <li>
+              <span class="wpcf7-form-control-wrap email">
+                <%= email_field_tag :email, params[:email], :size => "40", :class => "wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email", "aria-required" => true, "ara-invalid" => false, :placeholder => "Email Address" %>
+              </span>
+            </li>
+            <li class="last">
+              <span class="wpcf7-form-control-wrap website">
+                <%= text_field_tag :website, params[:website], :size => "40", :class => "wpcf7-form-control wpcf7-text", "aria-invalid"=>"false", :placeholder=>"Website" %>
+              </span>
+            </li>
+            <li>
+              <span class="wpcf7-form-control-wrap message">
+                <%= text_area_tag :message, params[:message], :cols => "40", :rows => "10", :class => "wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required", "aria-required"=>"true", "aria-invalid"=>"false", :placeholder=>"Your Message Here..." %>
+              </span>
+            </li>
+          </ul>
+          <p><%= submit_tag :send, :class => "wpcf7-form-control wpcf7-submit" %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
