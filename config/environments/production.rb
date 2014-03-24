@@ -27,7 +27,7 @@ Homeland::Application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs.
   config.assets.digest = true
@@ -77,4 +77,16 @@ Homeland::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+  config.action_mailer.default_url_options = { :host => 'ashtonsbglr.herokuapp.com' }
+
+  config.action_mailer.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address => 'smtp.gmail.com',
+    :domain => 'gmail.com',
+    :port => '587',
+    :user_name => 'rails.app.email@gmail.com',
+    :password => 'rubyonrails',
+    :authentication => :login
+  }
 end
