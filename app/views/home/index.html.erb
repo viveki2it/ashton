@@ -230,7 +230,7 @@
                 <li id="post-126" class="post-126 homeland_properties type-homeland_properties status-publish hentry property-home">
                   <div class="property-mask">
                     <figure class="pimage">
-                      <%= link_to image_tag(letting.photos.first.image, :width => "330",  :height => "230", :class => "attachment-homeland_property_medium wp-post-image"), 'javascript:void(0);'%>
+                      <%= link_to image_tag(Photo.where("imageable_id = #{letting.id} and imageable_type='letting'").first.image, :width => "330",  :height => "230", :class => "attachment-homeland_property_medium wp-post-image"), 'javascript:void(0);'%>
                       <figcaption><a href="javascript:void(0);" onclick="alert('Coming soon!!')"><i class="fa fa-link fa-lg"></i></a></figcaption>
                       <h4> <a href="javascript:void(0);" onclick="alert('Coming soon!!')" rel="tag"><%= letting.publish_as %></a></h4>
                       <div class="property-price clear">
@@ -323,7 +323,7 @@
             <% @featured_lettings.each do |ft_letting|  %>
               <li id="post-121" class="post-121 homeland_properties type-homeland_properties status-publish hentry featured-list clear">
                 <figure class="feat-thumb">
-                  <%= link_to image_tag(ft_letting.photos.first.image, :width => "160",  :height => "120", :class => "attachment-homeland_property_medium wp-post-image"), 'javascript:void(0);'%>
+                  <%= link_to image_tag(Photo.where("imageable_id = #{ft_letting.id} and imageable_type='letting'").first.image, :width => "160",  :height => "120", :class => "attachment-homeland_property_medium wp-post-image"), 'javascript:void(0);'%>
                   <figcaption><a href="javascript:void(0);" onclick="alert('Coming soon!!')"><i class="fa fa-link fa-lg"></i></a></figcaption>
                   <h4> <a href="javascript:void(0);" onclick="alert('Coming soon!!')" rel="tag"><%= ft_letting.publish_as %></a></h4>	
                 </figure>													
