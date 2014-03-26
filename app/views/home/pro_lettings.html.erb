@@ -103,42 +103,43 @@
 
         </ul>
       </div>
+      <% unless @lettings.empty?  %>
+        <div class="property-list clear">
+          <div class="property-three-cols">
+            <div class="grid cs-style-3 masonry">	
+              <ul class="clear">
+                <% @lettings.each do |letting| %>
+                  <li>
+                    <div class="property-mask">
+                      <figure class="pimage">
+                        <%= link_to image_tag(letting.photos.first.image, :width => "330",  :height => "230", :class => "attachment-homeland_property_medium wp-post-image"), 'javascript:void(0);'%>
+                        <figcaption><a href="javascript:void(0);"><i class="fa fa-link fa-lg"></i></a></figcaption>
+                        <h4><%= letting.publish_as %></h4>						
+                      </figure>
 
-      <div class="property-list clear">
-        <div class="property-three-cols">
-          <div class="grid cs-style-3 masonry">	
-            <ul class="clear">
-              <% @lettings.each do |letting| %>
-                <li>
-                  <div class="property-mask">
-                    <figure class="pimage">
-                      <%= link_to image_tag(letting.photos.first.image, :width => "330",  :height => "230", :class => "attachment-homeland_property_medium wp-post-image"), 'javascript:void(0);'%>
-                      <figcaption><a href="javascript:void(0);"><i class="fa fa-link fa-lg"></i></a></figcaption>
-                      <h4><%= letting.publish_as %></h4>						
-                    </figure>
-
-                  </div>
-                  <div class="property-info">
-                    <span>
-                      <i class="fa fa-home"></i>
-                      20,000&nbsp;Acres		
-                    </span>
-                    <span><i class="fa fa-inbox"></i><%= letting.bedroom_count %> Bedrooms</span>
-                  </div>
-                  <div class="property-desc">
-                    <h4><a href="javascript:void(0);"><%= letting.title %></a></h4>	
-                    <span class="price">
-                      <i class="fa fa-tag"></i>
-                      $<%= letting.deposit_amount %>		
-                    </span>
-                    <p><%= letting.property_short_description %> &#8230;</p>
-                  </div>
-                </li>
-              <% end %>
-            </ul>
-          </div>	
+                    </div>
+                    <div class="property-info">
+                      <span>
+                        <i class="fa fa-home"></i>
+                        20,000&nbsp;Acres		
+                      </span>
+                      <span><i class="fa fa-inbox"></i><%= letting.bedroom_count %> Bedrooms</span>
+                    </div>
+                    <div class="property-desc">
+                      <h4><a href="javascript:void(0);"><%= letting.title %></a></h4>	
+                      <span class="price">
+                        <i class="fa fa-tag"></i>
+                        $<%= letting.deposit_amount %>		
+                      </span>
+                      <p><%= letting.property_short_description %> &#8230;</p>
+                    </div>
+                  </li>
+                <% end %>
+              </ul>
+            </div>	
+          </div>
         </div>
-      </div>
+      <% end %>
     </div>
 
   </div>

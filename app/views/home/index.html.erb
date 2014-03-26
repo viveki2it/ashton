@@ -212,55 +212,57 @@
     </div>				
   </div>
 </section>
+<% unless @lettings.empty?  %>
 
-<!--PROPERTY-->
-<section class="property-block">
-  <div class="inside property-list-box clear">
-    <h2>
-      <span>
-        Latest Properties						
-      </span>
-    </h2>						
-    <div id="carousel" class="es-carousel-wrapper">
-      <div class="es-carousel">
-        <div class="grid cs-style-3">	
-          <ul class="clear">
-            <% @lettings.each do |letting| %>
-              <li id="post-126" class="post-126 homeland_properties type-homeland_properties status-publish hentry property-home">
-                <div class="property-mask">
-                  <figure class="pimage">
-                    <%= link_to image_tag(letting.photos.first.image, :width => "330",  :height => "230", :class => "attachment-homeland_property_medium wp-post-image"), 'javascript:void(0);'%>
-                    <figcaption><a href="javascript:void(0);" onclick="alert('Coming soon!!')"><i class="fa fa-link fa-lg"></i></a></figcaption>
-                    <h4> <a href="javascript:void(0);" onclick="alert('Coming soon!!')" rel="tag"><%= letting.publish_as %></a></h4>
-                    <div class="property-price clear">
-                      <div class="cat-price">
-                        <span class="pcategory"> <a href="javascript:void(0);" onclick="alert('Coming soon!!')" rel="tag"><%= letting.property_category %></a></span>
-                        <span class="price">
-                          $<%= letting.deposit_amount %>								
-                        </span>
+  <!--PROPERTY-->
+  <section class="property-block">
+    <div class="inside property-list-box clear">
+      <h2>
+        <span>
+          Latest Properties						
+        </span>
+      </h2>						
+      <div id="carousel" class="es-carousel-wrapper">
+        <div class="es-carousel">
+          <div class="grid cs-style-3">	
+            <ul class="clear">
+              <% @lettings.each do |letting| %>
+                <li id="post-126" class="post-126 homeland_properties type-homeland_properties status-publish hentry property-home">
+                  <div class="property-mask">
+                    <figure class="pimage">
+                      <%= link_to image_tag(letting.photos.first.image, :width => "330",  :height => "230", :class => "attachment-homeland_property_medium wp-post-image"), 'javascript:void(0);'%>
+                      <figcaption><a href="javascript:void(0);" onclick="alert('Coming soon!!')"><i class="fa fa-link fa-lg"></i></a></figcaption>
+                      <h4> <a href="javascript:void(0);" onclick="alert('Coming soon!!')" rel="tag"><%= letting.publish_as %></a></h4>
+                      <div class="property-price clear">
+                        <div class="cat-price">
+                          <span class="pcategory"> <a href="javascript:void(0);" onclick="alert('Coming soon!!')" rel="tag"><%= letting.property_category %></a></span>
+                          <span class="price">
+                            $<%= letting.deposit_amount %>								
+                          </span>
+                        </div>
+                        <span class="picon"><i class="fa fa-tag"></i></span>
                       </div>
-                      <span class="picon"><i class="fa fa-tag"></i></span>
-                    </div>
-                  </figure>
-                </div>
-                <div class="property-info">
-                  <span>
-                    <i class="fa fa-home"></i>
-                    20,000&nbsp;Acres		
-                  </span>
-                  <span><i class="fa fa-inbox"></i><%= letting.bedroom_count %> Bedrooms</span>
-                </div>
-                <div class="property-desc">
-                  <h4><a href="javascript:void(0);" onclick="alert('Coming soon!!')"><%= letting.title %></a></h4><p><%= letting.property_short_description %> &#8230;</p>
-                </div>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-      </div>	
-    </div>						
-  </div>
-</section>
+                    </figure>
+                  </div>
+                  <div class="property-info">
+                    <span>
+                      <i class="fa fa-home"></i>
+                      20,000&nbsp;Acres		
+                    </span>
+                    <span><i class="fa fa-inbox"></i><%= letting.bedroom_count %> Bedrooms</span>
+                  </div>
+                  <div class="property-desc">
+                    <h4><a href="javascript:void(0);" onclick="alert('Coming soon!!')"><%= letting.title %></a></h4><p><%= letting.property_short_description %> &#8230;</p>
+                  </div>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>	
+      </div>						
+    </div>
+  </section>
+<% end %>
 
 <section class="welcome-block">
   <div class="inside">
@@ -307,33 +309,36 @@
           </label>
         </li>	
       </ul>
-    </div>			
-    <div class="featured-block">
-      <h3>
-        <span>
-          Featured Properties					
-        </span>
-      </h3>
-      <div class="grid cs-style-3">	
-        <ul>
-          <% @featured_lettings.each do |ft_letting|  %>
-            <li id="post-121" class="post-121 homeland_properties type-homeland_properties status-publish hentry featured-list clear">
-              <figure class="feat-thumb">
-                <%= link_to image_tag(ft_letting.photos.first.image, :width => "160",  :height => "120", :class => "attachment-homeland_property_medium wp-post-image"), 'javascript:void(0);'%>
-                <figcaption><a href="javascript:void(0);" onclick="alert('Coming soon!!')"><i class="fa fa-link fa-lg"></i></a></figcaption>
-                <h4> <a href="javascript:void(0);" onclick="alert('Coming soon!!')" rel="tag"><%= ft_letting.publish_as %></a></h4>	
-              </figure>													
-              <div class="feat-desc">
-                <h5><a href="javascript:void(0);" onclick="alert('Coming soon!!')"><%= ft_letting.title %></a></h5>												<span>
-                  &nbsp;Bedrooms, <%= ft_letting.bedroom_count %> &nbsp;<%= ft_letting.property_category %>												</span>
-                <span class="price">
-                  $<%= ft_letting.deposit_amount %>/year												</span>
-              </div>
-            </li>	
-          <% end %>
-        </ul>
-      </div>
     </div>
+    <% unless @featured_lettings.empty?  %>
+
+      <div class="featured-block">
+        <h3>
+          <span>
+            Featured Properties					
+          </span>
+        </h3>
+        <div class="grid cs-style-3">	
+          <ul>
+            <% @featured_lettings.each do |ft_letting|  %>
+              <li id="post-121" class="post-121 homeland_properties type-homeland_properties status-publish hentry featured-list clear">
+                <figure class="feat-thumb">
+                  <%= link_to image_tag(ft_letting.photos.first.image, :width => "160",  :height => "120", :class => "attachment-homeland_property_medium wp-post-image"), 'javascript:void(0);'%>
+                  <figcaption><a href="javascript:void(0);" onclick="alert('Coming soon!!')"><i class="fa fa-link fa-lg"></i></a></figcaption>
+                  <h4> <a href="javascript:void(0);" onclick="alert('Coming soon!!')" rel="tag"><%= ft_letting.publish_as %></a></h4>	
+                </figure>													
+                <div class="feat-desc">
+                  <h5><a href="javascript:void(0);" onclick="alert('Coming soon!!')"><%= ft_letting.title %></a></h5>												<span>
+                    &nbsp;Bedrooms, <%= ft_letting.bedroom_count %> &nbsp;<%= ft_letting.property_category %>												</span>
+                  <span class="price">
+                    $<%= ft_letting.deposit_amount %>/year												</span>
+                </div>
+              </li>	
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    <% end %>
     <!--BLOG-->
     <div class="blog-block">
       <h3>
