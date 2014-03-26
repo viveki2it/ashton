@@ -6,7 +6,9 @@ Homeland::Application.routes.draw do
   root 'home#index'
   get "about_us" => "home#about_us"
   match "contact_us" => "home#contact_us", :via => [:get, :post]
-
+  post "lettings" => "home#lettings"
+  get "pro_lettings" => "home#pro_lettings", :as => :pro_lettings
+  get "pro_sale" => "home#pro_sale", :as => :pro_sale
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

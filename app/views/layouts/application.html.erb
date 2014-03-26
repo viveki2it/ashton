@@ -5,7 +5,9 @@
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
-    <style type="text/css"></style>			<style type="text/css">	body, h1, h2, h3, h4, h5, h6, input, textarea, select { font-family:'Roboto', sans-serif; } </style></head>
+    <style type="text/css"></style>			
+    <style type="text/css">	body, h1, h2, h3, h4, h5, h6, input, textarea, select { font-family:'Roboto', sans-serif; } </style>
+  </head>
 
   <script type='text/javascript' src='assets/jquery-1.7.2.min.js'></script>
   <script type='text/javascript' src='assets/jquery-migrate.min1576.js'></script>
@@ -15,20 +17,20 @@
   <script type='text/javascript' src='assets/gmap7e2e.js'></script>
   <script type='text/javascript' src='assets/comment-reply.min7e2e.js'></script>
   <script type='text/javascript' src='assets/jquery.notifyBar.js'></script>
-<%['notice', 'error', 'warning', 'alert'].each do |f|%>
-      <%if flash[f.to_sym]%>
-        <script type="text/javascript" >
-          jQuery(function () {
-            jQuery.notifyBar({
-              cls: "<%= f %>",
-              html: "<%=  flash[f.to_sym] %>",
-              delay: 3000,
-              animationSpeed: "normal"
-            });
+  <%['notice', 'error', 'warning', 'alert'].each do |f|%>
+    <%if flash[f.to_sym]%>
+      <script type="text/javascript" >
+        jQuery(function() {
+          jQuery.notifyBar({
+            cls: "<%= f %>",
+            html: "<%=  flash[f.to_sym] %>",
+            delay: 3000,
+            animationSpeed: "normal"
           });
-        </script>
-      <%end%>
+        });
+      </script>
     <%end%>
+  <%end%>
   <script type="text/javascript">
     (function($) {
       "use strict";
@@ -128,7 +130,8 @@
           <!--CALL INFO.-->
           <div class="call-info clear">
             <span class="call-us"><i class="fa fa-phone"></i>
-              Call us: 02920 231106			</span>
+              Call us: 02920 231106			
+            </span>
             <a href="http://ashtons.landmax.pro/sign-in" class="login" target="_blank">
               <i class="fa fa-user"></i>
               Login				
@@ -149,7 +152,8 @@
         <aside class="logo clear">
           <h1>
             <a href="/">
-              <img src="assets/uploads/2014/01/logo1.png" alt="Homeland" title="Homeland" />					</a>
+              <img src="assets/uploads/2014/01/logo1.png" alt="Homeland" title="Homeland" />	
+            </a>
           </h1>
         </aside>
         <!--MENU-->
@@ -162,15 +166,15 @@
               </li>
               <li id="menu-item-163" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-163"><a href="javascript:void(0);">Properties</a>
                 <ul class="sub-menu">
-                  <li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="javascript:void(0);" onclick="alert('Coming soon!!')">Lettings</a></li>
-                  <li id="menu-item-162" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162"><a href="javascript:void(0);" onclick="alert('Coming soon!!')">Sales</a></li>
+                  <li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><%= link_to "Lettings", pro_lettings_path %></li>
+                  <li id="menu-item-162" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162"><%= link_to "sales", pro_sale_path %></li>
                 </ul>
               </li>
-              <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19 <%=  params[:controller] == "home" and params[:action] == "contact_us" ? "current-menu-ancestor current-menu-parent" : ""   %>"><%= link_to "Contact Us", contact_us_path%></li>
+              <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19 <%=  params[:controller] == "home" and params[:action] == "contact_us" ? "current-menu-ancestor current-menu-parent" : ""   %>"><%= link_to "Contact Us", contact_us_path %></li>
+              <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><%= link_to "Scrap data", lettings_path, :method => "post" %></li>
             </ul>
           </div>			
         </nav>	
-
       </div>		
     </header>
 
