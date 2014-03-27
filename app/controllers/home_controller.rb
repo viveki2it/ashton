@@ -44,4 +44,8 @@ class HomeController < ApplicationController
   def pro_sale
     @lettings = Letting.all
   end
+  
+  def search
+    @lettings = Letting.location(params[:location]).status(params[:status]).property(params[:type]).rooms(params[:bed]).price(params["min-price"], params["max-price"])
+  end
 end

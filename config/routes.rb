@@ -9,6 +9,7 @@ Homeland::Application.routes.draw do
   post "lettings" => "home#lettings"
   get "pro_lettings" => "home#pro_lettings", :as => :pro_lettings
   get "pro_sale" => "home#pro_sale", :as => :pro_sale
+  get "search" => "home#search", :as => :search
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
